@@ -1,0 +1,32 @@
+package com.company;
+//Scanner class for reading input
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        //creating Scanner object
+        Scanner sc=new Scanner(System.in);
+        //prompt user to enter height of pyramid
+        System.out.print("Enter the height of the pyramid: ");
+        //reading height
+        int height=sc.nextInt();
+        //repeats loop 1 to height
+        for(int i=1;i<=height;i++)
+        {
+            //loop to print spaces
+            for (int j=0;j<height-i;j++)
+                System.out.print(" ");
+            //for loop to print # symbol
+            for (int j=0;j<=2*i;j++)
+            {
+                //check j==i to print a space in the middle of each row
+                if(j==i)
+                    System.out.print(" ");
+                //else print #
+                else
+                    System.out.print("#");
+            }
+            //new line after each row
+            System.out.println();
+        }
+    }
+}
